@@ -31,7 +31,7 @@
 </script>
 
 <style>
-    /* ৩. মাউস দিয়ে কোনো লেখা সিলেক্ট বা হাইলাইট করা বন্ধ করা */
+    /* ৩. মাউস দিয়ে কোনো লেখা সিলেক্ট বা হাইলাইট করা বন্ধ করা */
     body {
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none;    /* IE 10 and IE 11 */
@@ -44,9 +44,9 @@
 
     <!-- Navigation -->
     <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-wider text-sky-400 font-mono">&lt; Md. Rahatul Islam/&gt;</h1>
-            <nav class="space-x-4 hidden md:flex text-sm font-medium">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+            <h1 class="text-lg sm:text-xl font-bold tracking-wider text-sky-400 font-mono text-center md:text-left">&lt; Md. Rahatul Islam/&gt;</h1>
+            <nav class="flex flex-wrap justify-center gap-3 sm:space-x-4 text-xs sm:text-sm font-medium">
                 <a href="#about" class="hover:text-sky-400 transition">About</a>
                 <a href="#terminal" class="hover:text-sky-400 transition">Terminal</a>
                 <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
@@ -60,67 +60,63 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="py-20 border-b border-slate-800/50 bg-gradient-to-b from-slate-900 to-slate-950">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-2/3">
+    <section class="py-12 sm:py-20 border-b border-slate-800/50 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-8 sm:gap-12">
+            <div class="md:w-2/3 text-center md:text-left">
                 <div class="inline-block bg-sky-950 text-sky-400 text-xs px-3 py-1 rounded-full font-mono mb-4 border border-sky-800">
                     Ph.D. Researcher & AI/CV Specialist 
                 </div>
-                <h2 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Md. Rahatul Islam</h2>
-                <p class="text-lg text-slate-300 mb-4">
-                    Ph.D. Researcher at Kyushu Institute of Technology, Japan . 
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Md. Rahatul Islam</h2>
+                <p class="text-base sm:text-lg text-slate-300 mb-3">
+                    Ph.D. Researcher at Kyushu Institute of Technology, Japan[cite: 1]. 
                 </p>
-                <p class="text-slate-300 mb-4">
-                    Specializing in Computer Vision, Deep Learning, Person Re-Identification, Object Tracking, and Robotics.
+                <p class="text-sm sm:text-base text-slate-300 mb-4">
+                    Specializing in Computer Vision, Deep Learning, Person Re-Identification, Object Tracking, and Robotics[cite: 1].
                 </p>
-                <p class="text-sm text-slate-400 font-mono mb-6">
+                <p class="text-xs sm:text-sm text-slate-400 font-mono mb-6 break-words">
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=57850590500" target="_blank" class="text-sky-400 hover:underline">Scopus ID: 57850590500</a> | 
                     <a href="https://ieeexplore.ieee.org/author/37090091853" target="_blank" class="text-sky-400 hover:underline">IEEE: 37090091853</a> |  
-                    <a href="https://www.webofscience.com/wos/author/record/JPX-6784-2023" target="_blank" class="text-sky-400 hover:underline">Web of Science ID: JPX-6784-2023</a>
-            
+                    <a href="https://www.webofscience.com/wos/author/record/JPX-6784-2023" target="_blank" class="text-sky-400 hover:underline">Web of Science ID: JPX-6784-2023</a>[cite: 1]
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#terminal" class="bg-sky-600 hover:bg-sky-500 text-white px-6 py-3 rounded-xl font-medium transition flex items-center gap-2 font-mono text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#terminal" class="bg-sky-600 hover:bg-sky-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium transition flex items-center gap-2 font-mono text-xs sm:text-sm">
                         <i class="fas fa-terminal"></i> Run Terminal
                     </a>
-                    <a href="https://www.github.com/mdrahatulislam" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2 border border-slate-700 text-sm">
+                    <a href="https://www.github.com/mdrahatulislam" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium transition flex items-center gap-2 border border-slate-700 text-xs sm:text-sm">
                         <i class="fab fa-github"></i> GitHub Profile 
                     </a>
                 </div>
             </div>
             <div class="md:w-1/3 w-full flex justify-center">
-                <div class="relative w-64 h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-500/50 bg-slate-900 group">
-                    <!-- আপনার ছবির ফাইলের নাম বা পাথ এখানে দিন (যেমন: profile.jpg) -->
+                <div class="relative w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-500/50 bg-slate-900 group">
                     <img src="Photo.jpg" alt="Md. Rahatul Islam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
                         <span class="text-xs font-mono text-sky-400 font-medium">Md. Rahatul Islam</span>
                     </div>
                 </div>
             </div>
-
-            </div>
         </div>
     </section>
 
     <!-- Main Container -->
-    <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12 sm:space-y-20">
 
         <!-- Interactive Terminal Section -->
-        <section id="terminal" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-            <div class="flex items-center justify-between mb-4">
-                <h3 class="text-lg font-mono text-sky-400 flex items-center gap-2">
+        <section id="terminal" class="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
+                <h3 class="text-base sm:text-lg font-mono text-sky-400 flex items-center gap-2">
                     <i class="fas fa-code"></i> Research CLI & Terminal
                 </h3>
                 <span class="text-xs text-slate-500 font-mono">Click buttons or type commands</span>
             </div>
-            <div class="terminal-bg p-4 rounded-lg h-48 overflow-y-auto mb-4 text-sm" id="terminal-output">
+            <div class="terminal-bg p-4 rounded-lg h-40 sm:h-48 overflow-y-auto mb-4 text-xs sm:text-sm" id="terminal-output">
                 <p class="text-slate-400">Welcome to Rahatul's CLI Portfolio v2.0</p>
                 <p class="text-slate-400">Type <span class="text-yellow-400">'help'</span> to see available commands.</p>
                 <p class="text-green-400 mt-2">$ _</p>
             </div>
             <div class="flex gap-2 flex-wrap">
                 <button onclick="runCommand('help')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">help</button>
-                 <button onclick="runCommand('interests')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">interests</button>
+                <button onclick="runCommand('interests')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">interests</button>
                 <button onclick="runCommand('publications')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">publications</button>
                 <button onclick="runCommand('awards')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">awards</button>
                 <button onclick="runCommand('contact')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">contact</button>
@@ -129,93 +125,93 @@
         </section>
 
         <!-- Research Interests -->
-        <section id="about" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
-            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <section id="about" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+            <h3 class="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
                 <i class="fas fa-brain text-sky-400"></i> Research Interests
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono text-sm">
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Computer Vision & Image Processing </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Science </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Large Language Model </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Machine Learning </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Analysis </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Robotics </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 font-mono text-sm">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Computer Vision & Image Processing[cite: 1]</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Science[cite: 1]</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Large Language Model[cite: 1]</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Machine Learning[cite: 1]</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Analysis[cite: 1]</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Robotics[cite: 1]</div>
             </div>
         </section>
 
         <!-- Education & Experience -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
-                <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
+            <div class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+                <h3 class="text-lg sm:text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
                     <i class="fas fa-graduation-cap"></i> Education
                 </h3>
                 <div class="space-y-6 border-l-2 border-slate-800 pl-4 ml-2 text-sm">
                     <div>
-                        <span class="text-xs font-mono text-sky-400">2024 - Present </span>
-                        <h4 class="font-bold text-base mt-1">Doctor of Philosophy </h4>
+                        <span class="text-xs font-mono text-sky-400">2024 - Present[cite: 1]</span>
+                        <h4 class="font-bold text-base mt-1">Doctor of Philosophy[cite: 1]</h4>
                         <h6 class="text-slate-300">Department of Life Science and Systems Engineering</h6>
                         <h6 class="text-slate-300">Graduate School of Life Science and Systems Engineering</h6>
-                        <p class="font-bold text-base mt-1">Kyushu Institute of Technology, Fukuoka, Japan </p>
-                        <p class="text-slate-400">Research Focus: Computer Vision, Deep Learning, Person Re-Identification and Object Tracking </p>
+                        <p class="font-bold text-base mt-1">Kyushu Institute of Technology, Fukuoka, Japan[cite: 1]</p>
+                        <p class="text-slate-400">Research Focus: Computer Vision, Deep Learning, Person Re-Identification and Object Tracking[cite: 1]</p>
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-sky-400">2022 - 2024 </span>
-                        <h4 class="font-bold text-base mt-1">M.Sc. in Engineering </h4>
+                        <span class="text-xs font-mono text-sky-400">2022 - 2024[cite: 1]</span>
+                        <h4 class="font-bold text-base mt-1">M.Sc. in Engineering[cite: 1]</h4>
                         <h6 class="text-slate-300">Department of Human Intelligence Systems</h6>
                         <h6 class="text-slate-300">Graduate School of Life Science and Systems Engineering</h6>
-                        <p class="font-bold text-base mt-1">Kyushu Institute of Technology, Fukuoka, Japan </p>
-                        <p class="text-slate-400">Research Focus: Computer Vision, Deep Learning, Person Re-Identification and Object Tracking </p>
-                        <p class="text-slate-400 mt-1">Thesis Title: <b><i>“A comprehensive study of kid activity recognition with monitoring activity level and jumping behavior analysis using computer vision and image processing.”</i></b> </p>
+                        <p class="font-bold text-base mt-1">Kyushu Institute of Technology, Fukuoka, Japan[cite: 1]</p>
+                        <p class="text-slate-400">Research Focus: Computer Vision, Deep Learning, Person Re-Identification and Object Tracking[cite: 1]</p>
+                        <p class="text-slate-400 mt-1">Thesis Title: <b><i>“A comprehensive study of kid activity recognition with monitoring activity level and jumping behavior analysis using computer vision and image processing.”</i></b>[cite: 1]</p>
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-sky-400">2017 - 2020 </span>
-                        <h4 class="font-bold text-base mt-1">B.Sc. in Engineering </h4>
+                        <span class="text-xs font-mono text-sky-400">2017 - 2020[cite: 1]</span>
+                        <h4 class="font-bold text-base mt-1">B.Sc. in Engineering[cite: 1]</h4>
                         <h6 class="text-slate-300">Department of Electrical and Electronic Engineering</h6>
-                        <p class="font-bold text-base mt-1">Canadian University of Bangladesh, Dhaka </p>
-                        <p class="text-slate-400">Research Focus: Robotics </p>
-                        <p class="text-slate-400 mt-1">Thesis Title: <b><i>“Design and Implementation of Smart Social Distancing Systems.”</i></b> </p>
+                        <p class="font-bold text-base mt-1">Canadian University of Bangladesh, Dhaka[cite: 1]</p>
+                        <p class="text-slate-400">Research Focus: Robotics[cite: 1]</p>
+                        <p class="text-slate-400 mt-1">Thesis Title: <b><i>“Design and Implementation of Smart Social Distancing Systems.”</i></b>[cite: 1]</p>
                     </div>
                 </div>
             </div>
 
-            <div id="experience" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
-                <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
+            <div id="experience" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+                <h3 class="text-lg sm:text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
                     <i class="fas fa-briefcase"></i> Employment History
                 </h3>
                 <div class="space-y-6 border-l-2 border-slate-800 pl-4 ml-2 text-sm">
                     <div>
-                        <span class="text-xs font-mono text-sky-400">October 2024 - Present </span>
-                        <h4 class="font-bold text-base mt-1">Research Assistant </h4>
-                        <p class="text-slate-400">Kyushu Institute of Technology, Fukuoka, Japan </p>
-                        <p class="text-xs text-slate-500 mt-1">Research Focus: Human behavior analysis using computer vision & image processing .</p>
+                        <span class="text-xs font-mono text-sky-400">October 2024 - Present[cite: 5]</span>
+                        <h4 class="font-bold text-base mt-1">Research Assistant[cite: 5]</h4>
+                        <p class="text-slate-400">Kyushu Institute of Technology, Fukuoka, Japan[cite: 5]</p>
+                        <p class="text-xs text-slate-500 mt-1">Research Focus: Human behavior analysis using computer vision & image processing[cite: 5].</p>
                     </div>
                     <div>
-                        <span class="text-xs font-mono text-sky-400">October 2019 - August 2022 </span>
-                        <h4 class="font-bold text-base mt-1">Research Assistant </h4>
-                        <p class="text-slate-400">Canadian University of Bangladesh, Dhaka </p>
-                        <p class="text-xs text-slate-500 mt-1">Research Focus: Robotics .</p>
+                        <span class="text-xs font-mono text-sky-400">October 2019 - August 2022[cite: 5]</span>
+                        <h4 class="font-bold text-base mt-1">Research Assistant[cite: 5]</h4>
+                        <p class="text-slate-400">Canadian University of Bangladesh, Dhaka[cite: 5]</p>
+                        <p class="text-xs text-slate-500 mt-1">Research Focus: Robotics[cite: 5].</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Technical Skills -->
-        <section id="skills" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
-            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <section id="skills" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+            <h3 class="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
                 <i class="fas fa-microchip text-sky-400"></i> Technical Skills & Tech Stack
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Programming Languages</h4>
-                    <p class="text-slate-300">Python, C++, MATLAB </p>
+                    <p class="text-slate-300">Python, C++, MATLAB[cite: 4]</p>
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Frameworks</h4>
-                    <p class="text-slate-300">TensorFlow, PyTorch, Keras, Scikit-Learn </p>
+                    <p class="text-slate-300">TensorFlow, PyTorch, Keras, Scikit-Learn[cite: 4]</p>
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Computer Vision</h4>
-                    <p class="text-slate-300">OpenCV, YOLO, Vision Transformer, CNN, MoViNet, ANN </p>
+                    <p class="text-slate-300">OpenCV, YOLO, Vision Transformer, CNN, MoViNet, ANN[cite: 4]</p>
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Machine Learning</h4>
@@ -223,284 +219,285 @@
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Databases & Tools</h4>
-                    <p class="text-slate-300">SQL, MySQL, Tableau, Power BI </p>
+                    <p class="text-slate-300">SQL, MySQL, Tableau, Power BI[cite: 5]</p>
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Hardware & Others</h4>
-                    <p class="text-slate-300">Proteus, Arduino, Eagle, STM32, Jetson, LaTeX </p>
+                    <p class="text-slate-300">Proteus, Arduino, Eagle, STM32, Jetson, LaTeX[cite: 5]</p>
                 </div>
             </div>
         </section>
 
         <!-- Research Publications Section -->
-        <section id="publications" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
-            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                <i class="fas fa-book-open text-sky-400"></i> Research Publications (Total: 20) 
+        <section id="publications" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+            <h3 class="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
+                <i class="fas fa-book-open text-sky-400"></i> Research Publications (Total: 20)[cite: 2]
             </h3>
             <div class="space-y-6 text-sm text-slate-300">
-            <h4 class="text-lg font-bold text-sky-400 mt-6 mb-4">Journal Proceedings</h4>  
+                <h4 class="text-lg font-bold text-sky-400 mt-6 mb-4">Journal Proceedings</h4>  
+                
                 <!-- Journal 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 3.8) </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 3.8)[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b>; Kataoka, Y.; Teramoto, K.; Horio, Keiichi. 
                         <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline">
-                            “Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).” 
+                            “Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).”[cite: 2]
                         </a><br>
-                        <i>Journal of Imaging</i> 2026, 12, 150 .<br>
-                        Scopus Indexed | <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.3390/jimaging12040150</a> 
+                        <i>Journal of Imaging</i> 2026, 12, 150[cite: 2].<br>
+                        Scopus Indexed | <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.3390/jimaging12040150</a>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Journal 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 1.8) </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 1.8)[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         Islam Ferdib-Al, Sen Tonmay, Shamim Md. Shamim Parvej, Gharami Partha Protim and <b><u><i> Md. Rahatul Islam </i></u></b> 
                         <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline">
-                            “Deep Learning-based Multiclass Dementia Stage Classification for Alzheimer’s Disease Diagnosis from Imbalanced MRI Images Using Transfer Learning and Grad-CAM Explainability.” 
+                            “Deep Learning-based Multiclass Dementia Stage Classification for Alzheimer’s Disease Diagnosis from Imbalanced MRI Images Using Transfer Learning and Grad-CAM Explainability.”[cite: 2]
                         </a><br>
-                        <i>Engineering Research Express</i>, 2026 <br>
-                        Scopus Indexed | <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline">http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63</a> 
+                        <i>Engineering Research Express</i>, 2026[cite: 2]<br>
+                        Scopus Indexed | <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline break-all">http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63</a>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Journal 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 2.9) </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 2.9)[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         Ferdib-Al-Islam, Biswas, Prithvi, Gharami, Partha Protim, <b><u><i> Md. Rahatul Islam </i></u></b>. 
                         <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline">
-                            “XMP-Net: An XAI-Based Modified Xception Model for Recognizing Monkeypox and Other Skin Diseases.” 
+                            “XMP-Net: An XAI-Based Modified Xception Model for Recognizing Monkeypox and Other Skin Diseases.”[cite: 2]
                         </a><br>
-                        <i>BioMed Research International</i>, 2026, 1113178, 13 pages .<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.1155/bmri/1113178</a> 
+                        <i>BioMed Research International</i>, 2026, 1113178, 13 pages[cite: 2].<br>
+                        Scopus Indexed | <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1155/bmri/1113178</a>[cite: 2]
                     </p>
                 </div>
 
                 <h4 class="text-lg font-bold text-sky-400 mt-6 mb-4">Conference Proceedings</h4>
 
                 <!-- Conf 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
                     <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 2, 3]</span><br>
-                    <p class="mt-2">
+                    <p class="mt-2 break-words">
                         Md. Shamim Parvej; Kaysun Molla; Shahid Rahman; Nazim Uddin; <b><u><i> Md. Rahatul Islam </i></u></b>, Ferdib-Al-Islam; K. M. Danial Sadad. 
                         <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline">
                             “Leveraging deep learning for classifying common skin diseases in Bangladesh with Grad-CAM explainability.”[cite: 2, 3]
                         </a><br>
                         <i>AIP Conference Proceedings</i>, 2026[cite: 2, 3].<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.1063/5.0329124</a>[cite: 2, 3]
+                        Scopus Indexed | <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1063/5.0329124</a>[cite: 2, 3]
                     </p>
                 </div>
 
                 <!-- Conf 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         Tiya Bisla; Ritik Shukla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
                         <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline">
-                            “A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten.” 
+                            “A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten.”[cite: 2]
                         </a><br>
-                        <i>2026 14th International Conference on Information and Education Technology (ICIET)</i>, Koriyama, Japan .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/11561624/</a> <br>
-                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong> 
+                        <i>2026 14th International Conference on Information and Education Technology (ICIET)</i>, Koriyama, Japan[cite: 2].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/11561624/</a>[cite: 2] <br>
+                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Conf 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         Ritik Shukla; Tiya Bisla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
                         <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline">
-                            “BENCHMARKING FACE RECOGNITION MODELS ON POSE-AWARE CHILD FACE EMBEDDINGS.” 
+                            “BENCHMARKING FACE RECOGNITION MODELS ON POSE-AWARE CHILD FACE EMBEDDINGS.”[cite: 2]
                         </a><br>
-                        <i>ICIC Express Letters, Part B: Applications</i>, 2026 .<br>
-                        Scopus Indexed | <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.24507/icicelb.17.06.533</a> 
+                        <i>ICIC Express Letters, Part B: Applications</i>, 2026[cite: 2].<br>
+                        Scopus Indexed | <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.24507/icicelb.17.06.533</a>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Conf 4 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         T. Bisla, R. Shukla, M. Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b> and K. Horio. 
                         <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline">
-                            “Jumping behavior Analysis after Identification of Daycare Children’s Activities utilizing YOLOv8 Algorithm.” 
+                            “Jumping behavior Analysis after Identification of Daycare Children’s Activities utilizing YOLOv8 Algorithm.”[cite: 2]
                         </a><br>
-                        <i>2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)</i>, Bangalore, India, 2024, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10677280</a> 
+                        <i>2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)</i>, Bangalore, India, 2024, pp. 1-6[cite: 2].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10677280</a>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Conf 5 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award[cite: 2]</span><br>
+                    <p class="mt-2 break-words">
                         Tiya Bisla, Ritik Shukla, Mansi Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b>, Takao Koyasu, Keisuke Teramoto, Yui Kataoka, Keiichi HORIO. 
                         <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline">
-                            “Kid Activity Recognition: A Comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s Algorithms.” 
+                            “Kid Activity Recognition: A Comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s Algorithms.”[cite: 2]
                         </a><br>
-                        <i>2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)</i>, Vellore, India, 2024, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10574569</a> <br>
-                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong> 
+                        <i>2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)</i>, Vellore, India, 2024, pp. 1-6[cite: 2].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10574569</a>[cite: 2] <br>
+                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong>[cite: 2]
                     </p>
                 </div>
 
                 <!-- Conf 6 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
                         <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline">
-                            “Identification of Human Activity by Utilizing YOLOv5s Approaches.” 
+                            “Identification of Human Activity by Utilizing YOLOv5s Approaches.”[cite: 3]
                         </a><br>
-                        <i>2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)</i>, Mt Pleasant, MI, USA, 2024, pp. 1-7 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10586161</a> 
+                        <i>2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)</i>, Mt Pleasant, MI, USA, 2024, pp. 1-7[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10586161</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 7 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         M. M. Hosen, <b><u><i> Md. Rahatul Islam </i></u></b>, F. Tabassum, S. T. Tonni, M. M. N. Noor and S. Rahman. 
                         <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline">
-                            “Localization of Dengue Virus Likelihood Using Image Processing Technique.” 
+                            “Localization of Dengue Virus Likelihood Using Image Processing Technique.”[cite: 3]
                         </a><br>
-                        <i>2024 International Conference on Emerging Smart Computing and Informatics (ESCI)</i>, Pune, India, 2024, pp. 1-7 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10497351</a> 
+                        <i>2024 International Conference on Emerging Smart Computing and Informatics (ESCI)</i>, Pune, India, 2024, pp. 1-7[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10497351</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 8 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         F. Tabassum, <b><u><i> Md. Rahatul Islam </i></u></b>, M. S. Ur Rahman and J. Majumder. 
                         <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline">
-                            “A Comprehensive Study on Different Optimizations of Pure Reference Counting Garbage Collectors.” 
+                            “A Comprehensive Study on Different Optimizations of Pure Reference Counting Garbage Collectors.”[cite: 3]
                         </a><br>
-                        <i>2023 International Conference on Computational Intelligence, Networks and Security (ICCINS)</i>, Mylavaram, India, 2023, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10450100</a> 
+                        <i>2023 International Conference on Computational Intelligence, Networks and Security (ICCINS)</i>, Mylavaram, India, 2023, pp. 1-6[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10450100</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 9 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         Mahmud, I., Ferdib-Al-Islam, <b><u><i> Md. Rahatul Islam </i></u></b>, Israk, M.A., Rahman, M.S.U., Ahuja, S. 
                         <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline">
-                            “IoT-Based Smart Poultry and Hatchery Farm: An Integrated Solution with Anti-Theft and Fire Alarm System.” 
+                            “IoT-Based Smart Poultry and Hatchery Farm: An Integrated Solution with Anti-Theft and Fire Alarm System.”[cite: 3]
                         </a><br>
-                        <i>Hybrid Intelligent Systems. HIS 2023. Lecture Notes in Networks and Systems, vol 1226</i> .<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.1007/978-3-031-78934-2_35</a> 
+                        <i>Hybrid Intelligent Systems. HIS 2023. Lecture Notes in Networks and Systems, vol 1226</i>[cite: 3].<br>
+                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-78934-2_35</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 10 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b>, Rokon Uz Zaman, A. B. M., Ferdib-Al-Islam, Tabassum, Faria, Israk, Md. Araf, Mahmud, Md. Shakir, Majumder, Jimmy. 
                         <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline">
-                            “Crime Prediction by Detecting Violent Objects and Activity Using Pre-Trained YOLOv8n and MoViNet A0 Models.” 
+                            “Crime Prediction by Detecting Violent Objects and Activity Using Pre-Trained YOLOv8n and MoViNet A0 Models.”[cite: 3]
                         </a><br>
-                        <i>2023 International Conference on Modeling and E-Information Research...</i> Karawang, Indonesia, 2023, pp. 44-49 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10458156</a> 
+                        <i>2023 International Conference on Modeling and E-Information Research...</i> Karawang, Indonesia, 2023, pp. 44-49[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10458156</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 11 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         Islam-Al-F., M. S. Sanim, K. M. Hasan, M. M. Alam, M. A. A. Walid, <b><u><i> Md. Rahatul Islam </i></u></b>. 
                         <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline">
-                            “Crop-RecFIS: Machine Learning Classifiers for Crop Recommendation and Feature Importance Scores Calculation.” 
+                            “Crop-RecFIS: Machine Learning Classifiers for Crop Recommendation and Feature Importance Scores Calculation.”[cite: 3]
                         </a><br>
-                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10307833</a> 
+                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307833</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 12 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         Ferdib-Al-Islam, A. Saha, E. J. Bristy, <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal and S. A. Ridita. 
                         <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline">
-                            “LIME-based Explainable AI Models for Predicting Disease from Patient’s Symptoms.” 
+                            “LIME-based Explainable AI Models for Predicting Disease from Patient’s Symptoms.”[cite: 3]
                         </a><br>
-                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10307223</a> 
+                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307223</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 13 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
                         <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline">
-                            “Real Time-Based Face Recognition, Tracking, Counting, and Calculation of Spent Time of Person Using OpenCV and Centroid Tracker Algorithms.” 
+                            “Real Time-Based Face Recognition, Tracking, Counting, and Calculation of Spent Time of Person Using OpenCV and Centroid Tracker Algorithms.”[cite: 3]
                         </a><br>
-                        <i>2023 5th International Conference on Computer Communication and the Internet (ICCCI)</i>, Fujisawa, Japan, 2023, pp. 210-216 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10210102</a> 
+                        <i>2023 5th International Conference on Computer Communication and the Internet (ICCCI)</i>, Fujisawa, Japan, 2023, pp. 210-216[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10210102</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 14 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 3]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b>, M. A. Israk, Ferdib-Al-Islam, J. Majumder and S. Rahman. 
                         <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline">
-                            “SHD: Development of an Smart Headband for Deafblind People.” 
+                            “SHD: Development of an Smart Headband for Deafblind People.”[cite: 3]
                         </a><br>
-                        <i>2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)</i>, Chittagong, Bangladesh, 2023, pp. 1-5 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/10101656</a> 
+                        <i>2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)</i>, Chittagong, Bangladesh, 2023, pp. 1-5[cite: 3].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10101656</a>[cite: 3]
                     </p>
                 </div>
 
                 <!-- Conf 15 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference[cite: 4]</span><br>
+                    <p class="mt-2 break-words">
                         Ferdib-Al-Islam, Sanim, M.S., <b><u><i> Md. Rahatul Islam </i></u></b>, Rahman, S., Afzal, R., Hasan, K.M. 
                         <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline">
-                            “Prediction of Dementia Using SMOTE Based Oversampling and Stacking Classifier.” 
+                            “Prediction of Dementia Using SMOTE Based Oversampling and Stacking Classifier.”[cite: 4]
                         </a><br>
-                        <i>Hybrid Intelligent Systems. HIS 2022. Lecture Notes in Networks and Systems, vol 647</i> .<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.1007/978-3-031-27409-1_40</a> 
+                        <i>Hybrid Intelligent Systems. HIS 2022. Lecture Notes in Networks and Systems, vol 647</i>[cite: 4].<br>
+                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-27409-1_40</a>[cite: 4]
                     </p>
                 </div>
 
                 <!-- Conf 16 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference </span><br>
-                    <p class="mt-2">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
+                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 4]</span><br>
+                    <p class="mt-2 break-words">
                         <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal, Asaduzzaman, Ferdib-Al-Islam and J. Majumder. 
                         <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline">
-                            “COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection.” 
+                            “COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection.”[cite: 4]
                         </a><br>
-                        <i>2022 International Conference on Advancement in Electrical and Electronic Engineering (ICAEEE)</i>, Gazipur, Bangladesh, 2022, pp. 1-6 .<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline">https://ieeexplore.ieee.org/document/9836350</a> 
+                        <i>2022 International Conference on Advancement in Electrical and Electronic Engineering (ICAEEE)</i>, Gazipur, Bangladesh, 2022, pp. 1-6[cite: 4].<br>
+                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/9836350</a>[cite: 4]
                     </p>
                 </div>
 
                 <!-- Other Publication / Gold Award Section -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl mt-4">
-                    <span class="text-xs font-mono bg-amber-950 text-amber-400 px-2 py-0.5 rounded border border-amber-800">Others | Gold Award </span><br>
-                    <p class="mt-2 text-sm text-slate-300">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl mt-4 overflow-hidden">
+                    <span class="text-xs font-mono bg-amber-950 text-amber-400 px-2 py-0.5 rounded border border-amber-800">Others | Gold Award[cite: 4]</span><br>
+                    <p class="mt-2 text-sm text-slate-300 break-words">
                         Sheikh Shihab Hossain, Ferdib-Al-Islam, <b><u><i>Md. Rahatul Islam </i></u></b>, Shahid Rahman, Md. Shamim Parvej. 
                         <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline">
-                            “Autism Spectrum disorder identification from facial images using Fine tuned Pre-trained deep learning models and Explainable AI techniques.” 
+                            “Autism Spectrum disorder identification from facial images using Fine tuned Pre-trained deep learning models and Explainable AI techniques.”[cite: 4]
                         </a><br>
-                        <i>Semarak International Journal of Applied Psychology</i>, 5, Issue 1 (2025) 29-53, 2025 .<br>
-                        DOI Link: <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline">https://doi.org/10.37934/sijap.5.1.2953b</a> <br>
-                        <strong class="text-amber-400 mt-1 inline-block">AWARD: Gold Award</strong> 
+                        <i>Semarak International Journal of Applied Psychology</i>, 5, Issue 1 (2025) 29-53, 2025[cite: 4].<br>
+                        DOI Link: <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.37934/sijap.5.1.2953b</a>[cite: 4]<br>
+                        <strong class="text-amber-400 mt-1 inline-block">AWARD: Gold Award</strong>[cite: 4]
                     </p>
                 </div>
             </div>
@@ -508,181 +505,171 @@
 
         <!-- Peer Reviewer Experience, Honors & Awards -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl text-sm">
+            <div class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
                 <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-tasks mr-2"></i> Peer Reviewer Experience</h3>
                 <ul class="list-disc list-inside space-y-2 text-slate-300">
-                    <li>ISPRS Open Journal of Photogrammetry and Remote Sensing </li>
-                    <li>IEEE Transactions on Consumer Electronics </li>
-                    <li>Frontiers in Medical Technology </li>
-                    <li>IEEE Internet of Things Journal </li>
-                    <li>The Journal of Engineering </li>
-                    <li>Conference Reviewer: IEIT, ICCINS, IEEE EDUCON </li>
+                    <li>ISPRS Open Journal of Photogrammetry and Remote Sensing[cite: 4]</li>
+                    <li>IEEE Transactions on Consumer Electronics[cite: 4]</li>
+                    <li>Frontiers in Medical Technology[cite: 4]</li>
+                    <li>IEEE Internet of Things Journal[cite: 4]</li>
+                    <li>The Journal of Engineering[cite: 4]</li>
+                    <li>Conference Reviewer: IEIT, ICCINS, IEEE EDUCON[cite: 4]</li>
                 </ul>
             </div>
 
             <!-- Honors & Awards Section (Separated) -->
-            <section id="awards" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl text-sm">
+            <section id="awards" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
                 <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-trophy mr-2"></i> Honors & Awards</h3>
                 <div class="space-y-4 text-slate-300">
                     <div>
                         <strong>KUMA Scholarship-2024</strong><br>
-                        <span class="text-xs text-slate-400">Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology (Doctoral's Course) .</span>
+                        <span class="text-xs text-slate-400">Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology (Doctoral's Course)[cite: 6].</span>
                     </div>
                     <div>
                         <strong>Japanese Government (Monbukagakusho: MEXT) Scholarship-2022</strong><br>
-                        <span class="text-xs text-slate-400">Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology (Master's Course) .</span>
+                        <span class="text-xs text-slate-400">Graduate School of Life Science and Systems Engineering, Kyushu Institute of Technology (Master's Course)[cite: 6].</span>
                     </div>
                     <div>
                         <strong>Sarafat Chowdhuri Merit Scholarship 2019</strong><br>
-                        <span class="text-xs text-slate-400">Department of Electrical and Electronic Engineering from Canadian University of Bangladesh for B.Sc. Result .</span>
+                        <span class="text-xs text-slate-400">Department of Electrical and Electronic Engineering from Canadian University of Bangladesh for B.Sc. Result[cite: 6].</span>
                     </div>
                 </div>
             </section>
         </section>
 
-        <!-- Licenses & Certifications Section with Certificate Image/Badge Support -->
-<section id="certifications" class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl text-sm">
-    <h3 class="text-xl font-bold mb-6 text-sky-400"><i class="fas fa-certificate mr-2"></i> Licenses & Certifications</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Cert 1 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">Getting Started with AI on Jetson Nano</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: NVIDIA </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 3zfxkDuNT32ANTIzqjAoqQ </p>
-            </div>
-            <!-- Certificate Image Preview (আপনার ছবির লিংক এখানে দিতে পারেন) -->
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://learn.nvidia.com/certificates?id=3zfxkDuNT32ANTIzqjAoqQ" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
+        <!-- Licenses & Certifications Section -->
+        <section id="certifications" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
+            <h3 class="text-xl font-bold mb-6 text-sky-400"><i class="fas fa-certificate mr-2"></i> Licenses & Certifications</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Cert 1 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">Getting Started with AI on Jetson Nano</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: NVIDIA[cite: 5]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 3zfxkDuNT32ANTIzqjAoqQ[cite: 5]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://learn.nvidia.com/certificates?id=3zfxkDuNT32ANTIzqjAoqQ" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Cert 2 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">Python for Data Science</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: IBM </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 92dc976e-2d50-4898-87c7-75eca05be292 </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://drive.google.com/file/d/1ilmlo6L03nRPevypNv_lM0pPT9_-wPPY/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
+                <!-- Cert 2 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">Python for Data Science</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: IBM[cite: 5]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 92dc976e-2d50-4898-87c7-75eca05be292[cite: 5]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://drive.google.com/file/d/1ilmlo6L03nRPevypNv_lM0pPT9_-wPPY/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Cert 3 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">PyTorch Bootcamp</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: OpenCV University </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: edd167060ef24d8ba7e04f35de75c455 </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://courses.opencv.org/certificates/edd167060ef24d8ba7e04f35de75c455" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
+                <!-- Cert 3 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">PyTorch Bootcamp</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: OpenCV University[cite: 5]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: edd167060ef24d8ba7e04f35de75c455[cite: 5]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://courses.opencv.org/certificates/edd167060ef24d8ba7e04f35de75c455" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Cert 4 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">Computer Vision for Data Scientists</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 82d94dc4fd19268fb7016b4f08d5e5ec1fbe9e5fa2fe05ca8f211b72e140e4c6 </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://drive.google.com/file/d/1x9JeQLNO74R1hO0BMy5CsCwiVAQ3-vaB/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
+                <!-- Cert 4 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">Computer Vision for Data Scientists</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning[cite: 5]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 82d94dc4fd19268fb7016b4f08d5e5ec1fbe9e5fa2fe05ca8f211b72e140e4c6[cite: 5]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://drive.google.com/file/d/1x9JeQLNO74R1hO0BMy5CsCwiVAQ3-vaB/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Cert 5 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">Artificial Intelligence Foundations: Machine Learning</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: df2eb8c15c79bdf8e7276df8dec9517a5c8a89b2bad94508dc434631cde51d95 </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://drive.google.com/file/d/1-U2TTshuKARPAkXNRb_wjNyKXiFfdlFF/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
+                <!-- Cert 5 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">Artificial Intelligence Foundations: Machine Learning</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning[cite: 5]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: df2eb8c15c79bdf8e7276df8dec9517a5c8a89b2bad94508dc434631cde51d95[cite: 5]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://drive.google.com/file/d/1-U2TTshuKARPAkXNRb_wjNyKXiFfdlFF/view?usp=drive_link" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Cert 6 -->
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
-            <div>
-                <h4 class="font-semibold text-slate-200">Deep Learning: Getting Started (2024)</h4>
-                <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning </p>
-                <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 5917355d240748dca95c8746eb31790638f1f862beb1ec90e1d4babe772596fc </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
-                <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
-                <a href="https://drive.google.com/file/d/1aKYQ0wOui-LdsATmkm_Yae28q27MxsEe/view?usp=sharing" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
-                    <i class="fas fa-image"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-        <!-- Language Skills & References -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl text-sm">
-                <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-language mr-2"></i> Language Skills</h3>
-                <p class="text-slate-300 mb-2"><strong>Bangla:</strong> Mother Tongue </p>
-                <p class="text-slate-300 mb-2"><strong>English:</strong> Professional proficiency in oral and written communication </p>
-                <p class="text-slate-300"><strong>Japanese:</strong> Beginner N5 level equivalent </p>
-            </div>
-            
-
+                <!-- Cert 6 -->
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-slate-200">Deep Learning: Getting Started (2024)</h4>
+                        <p class="text-xs text-sky-400 mt-1">Issuing: LinkedIn Learning[cite: 6]</p>
+                        <p class="text-xs text-slate-400 mt-2 font-mono break-all">ID: 5917355d240748dca95c8746eb31790638f1f862beb1ec90e1d4babe772596fc[cite: 6]</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-mono">Verified Credential</span>
+                        <a href="https://drive.google.com/file/d/1aKYQ0wOui-LdsATmkm_Yae28q27MxsEe/view?usp=sharing" target="_blank" class="text-sky-400 hover:text-sky-300 text-xs flex items-center gap-1 font-medium">
+                            <i class="fas fa-image"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-<!-- Contact Section -->
-        <section id="contact" class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl">
+        <!-- Language Skills -->
+        <section class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
+            <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-language mr-2"></i> Language Skills</h3>
+            <p class="text-slate-300 mb-2"><strong>Bangla:</strong> Mother Tongue[cite: 5]</p>
+            <p class="text-slate-300 mb-2"><strong>English:</strong> Professional proficiency in oral and written communication[cite: 5]</p>
+            <p class="text-slate-300"><strong>Japanese:</strong> Beginner N5 level equivalent[cite: 5]</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
             <h3 class="text-2xl font-bold text-white mb-2">Contact Information</h3>
             <p class="text-slate-400 text-sm mb-6">Feel free to reach out for research collaboration, academic discussions, or inquiries.</p>
             
-            <div class="space-y-3 text-sm text-slate-300 mb-8">
+            <div class="space-y-3 text-sm text-slate-300 mb-8 break-words">
                 <div class="flex items-center gap-3">
                     <i class="fas fa-envelope text-sky-400 w-5"></i>
-                    <span>mdrahatulislam.cub@gmail.com</span>
+                    <span>mdrahatulislam.cub@gmail.com[cite: 1]</span>
                 </div>
-                
-
                 <div class="flex items-center gap-3">
                     <i class="fas fa-map-marker-alt text-sky-400 w-5"></i>
-                    <span>Kitakyushu, Fukuoka, Japan</span>
+                    <span>Kitakyushu, Fukuoka, Japan[cite: 1]</span>
                 </div>
             </div>
 
             <!-- Social Buttons -->
             <div class="flex flex-wrap gap-3">
-                <a href="https://www.linkedin.com/in/md-rahatul-islam/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/md-rahatul-islam/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 text-xs sm:text-sm">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://www.github.com/mdrahatulislam" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 border border-slate-700">
+                <a href="https://www.github.com/mdrahatulislam" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 border border-slate-700 text-xs sm:text-sm">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="https://scholar.google.com/citations?user=mdrahatulislam" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2">
+                <a href="https://scholar.google.com/citations?user=mdrahatulislam" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 text-xs sm:text-sm">
                     <i class="fas fa-graduation-cap"></i> Google Scholar
                 </a>
-                <a href="https://orcid.org/0000-0002-5745-4439" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2">
+                <a href="https://orcid.org/0000-0002-5745-4439" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 text-xs sm:text-sm">
                     <i class="fab fa-orcid"></i> ORCID
                 </a>
             </div>
@@ -692,7 +679,7 @@
 
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-900 text-center py-6 text-xs text-slate-500 font-mono">
-        <p>&copy; Developed by Md. Rahatul Islam. </p>
+        <p>&copy; Developed by Md. Rahatul Islam.</p>
     </footer>
 
     <!-- Terminal Interaction Script -->
@@ -706,16 +693,16 @@
                     response = "Available commands: interests, awards, contact, clear";
                     break;
                 case 'interests':
-                    response = "Computer Vision, Deep Learning, LLM, Machine Learning, Data Analysis, Robotics.";
+                    response = "Computer Vision, Deep Learning, LLM, Machine Learning, Data Analysis, Robotics[cite: 1].";
                     break;
                 case 'publications':
-                    response = "Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).";
+                    response = "Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit)[cite: 2].";
                     break;    
                 case 'awards':
-                    response = "KUMA Scholarship-2024, MEXT Scholarship-2022, Multiple Best Paper Awards";
+                    response = "KUMA Scholarship-2024, MEXT Scholarship-2022, Multiple Best Paper Awards[cite: 2, 6].";
                     break;
                 case 'contact':
-                    response = "Email: mdrahatulislam.cub@gmail.com";
+                    response = "Email: mdrahatulislam.cub@gmail.com[cite: 1]";
                     break;
                 case 'clear':
                     output.innerHTML = '<p class="text-green-400">$ _</p>';
@@ -727,7 +714,6 @@
             output.innerHTML += `<p class="text-green-400 mt-2">$ ${cmd}</p><p class="text-slate-300">${response}</p>`;
             output.scrollTop = output.scrollHeight;
         }
-        
     </script>
 </body>
 </html>
