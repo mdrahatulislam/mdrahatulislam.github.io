@@ -11,33 +11,31 @@
     </style>
 
     <script>
-    // ১. মাউসের রাইট-ক্লিক সম্পূর্ণ বন্ধ করা
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        alert('Right-click is disabled on this portfolio.');
-    });
-
-    // ২. কিবোর্ড শর্টকাট (Ctrl+C, Ctrl+U, Ctrl+S ইত্যাদি) বন্ধ করা
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'a')) {
+        // রাইট-ক্লিক বন্ধ করা
+        document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-            alert('Copying is disabled on this website.');
-        }
-        // F12 বা DevTools কি ব্লক করা
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-    });
-</script>
+            alert('Right-click is disabled on this portfolio.');
+        });
 
-<style>
-    /* ৩. মাউস দিয়ে কোনো লেখা সিলেক্ট বা হাইলাইট করা বন্ধ করা */
-    body {
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none;    /* IE 10 and IE 11 */
-        user-select: none;        /* Standard syntax */
-    }
-</style>
+        // কিবোর্ড শর্টকাট ব্লক করা
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'a')) {
+                e.preventDefault();
+                alert('Copying is disabled on this website.');
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-950 text-slate-100 font-sans leading-relaxed">
@@ -52,6 +50,7 @@
                 <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
                 <a href="#publications" class="hover:text-sky-400 transition">Publications</a>
                 <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+                <a href="#activities" class="hover:text-sky-400 transition">Activities</a>
                 <a href="#awards" class="hover:text-sky-400 transition">Awards</a>
                 <a href="#certifications" class="hover:text-sky-400 transition">Certificates</a>
                 <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
@@ -66,13 +65,22 @@
                 <div class="inline-block bg-sky-950 text-sky-400 text-xs px-3 py-1 rounded-full font-mono mb-4 border border-sky-800">
                     Ph.D. Researcher & AI/CV Specialist 
                 </div>
+                
+                <!-- Name -->
                 <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Md. Rahatul Islam</h2>
-                <p class="text-base sm:text-lg text-slate-300 mb-3">
-                    Ph.D. Researcher at Kyushu Institute of Technology, Japan. 
+                
+                <!-- Detailed Bio Added After Name (With text-justify) -->
+                <p class="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed text-justify">
+                    I am pursuing Doctor of Philosophy (PhD) in Life Science and Systems Engineering at Kyushu Institute of Technology. I am working as a Research Assistant in Life Science and Systems Engineering at Kyushu Institute of Technology. I completed my M.Sc. in Human Intelligence Systems at Kyushu Institute of Technology as a <b><i>MEXT Scholar</i></b>. My exploration into the field of artificial intelligence systems is characterized by a deep curiosity about the confluence of technology, cognition, and human behavior. I completed my Bachelor's Degree in Electrical and Electronic Engineering from the Canadian University of Bangladesh. I'm a promising talent in the fields of human intelligence systems, robotics, machine learning, and computer vision due to my intellectual prowess, strong work ethic, and enthusiasm for interdisciplinary collaboration.
                 </p>
-                <p class="text-sm sm:text-base text-slate-300 mb-4">
-                    Specializing in Computer Vision, Deep Learning, Person Re-Identification, Object Tracking, and Robotics.
-                </p>
+                
+                <!-- Live Research Metrics Widget -->
+                <div class="grid grid-cols-3 gap-3 my-4 p-3 bg-slate-900/80 border border-slate-800 rounded-xl font-mono text-xs text-center">
+                    <div><span class="text-sky-400 font-bold block text-sm">20</span> Publications</div>
+                    <div><span class="text-emerald-400 font-bold block text-sm">Q1/Q2</span> Top Journals</div>
+                    <div><span class="text-amber-400 font-bold block text-sm">Multiple</span> Best Paper Awards</div>
+                </div>
+
                 <p class="text-xs sm:text-sm text-slate-400 font-mono mb-6 break-words">
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=57850590500" target="_blank" class="text-sky-400 hover:underline">Scopus ID: 57850590500</a> | 
                     <a href="https://ieeexplore.ieee.org/author/37090091853" target="_blank" class="text-sky-400 hover:underline">IEEE: 37090091853</a> |  
@@ -89,7 +97,7 @@
             </div>
             <div class="md:w-1/3 w-full flex justify-center">
                 <div class="relative w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-sky-500/50 bg-slate-900 group">
-                    <img src="Photo.jpg" alt="Md. Rahatul Islam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <img src="profile.jpg" alt="Md. Rahatul Islam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
                         <span class="text-xs font-mono text-sky-400 font-medium">Md. Rahatul Islam</span>
                     </div>
@@ -101,22 +109,29 @@
     <!-- Main Container -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12 sm:space-y-20">
 
-        <!-- Interactive Terminal Section -->
+        <!-- Advanced Interactive CLI Terminal with Typing Support -->
         <section id="terminal" class="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
                 <h3 class="text-base sm:text-lg font-mono text-sky-400 flex items-center gap-2">
-                    <i class="fas fa-code"></i> Research CLI & Terminal
+                    <i class="fas fa-code"></i> Advanced Research CLI
                 </h3>
-                <span class="text-xs text-slate-500 font-mono">Click buttons or type commands</span>
+                <span class="text-xs text-slate-500 font-mono">Type commands (e.g., 'help', 'bio', 'metrics', 'clear')</span>
             </div>
-            <div class="terminal-bg p-4 rounded-lg h-40 sm:h-48 overflow-y-auto mb-4 text-xs sm:text-sm" id="terminal-output">
-                <p class="text-slate-400">Welcome to Rahatul's CLI Portfolio v2.0</p>
-                <p class="text-slate-400">Type <span class="text-yellow-400">'help'</span> to see available commands.</p>
+            <div class="terminal-bg p-4 rounded-lg h-48 overflow-y-auto mb-4 text-xs sm:text-sm" id="terminal-output">
+                <p class="text-slate-400">Welcome to Rahatul's Advanced CLI v3.0</p>
+                <p class="text-slate-400">Type <span class="text-yellow-400">'help'</span> or click buttons below.</p>
                 <p class="text-green-400 mt-2">$ _</p>
+            </div>
+            <!-- Interactive Input Line -->
+            <div class="flex items-center gap-2 mb-3 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800 font-mono text-xs">
+                <span class="text-green-400">$</span>
+                <input type="text" id="terminal-input" placeholder="Type command here..." class="bg-transparent w-full focus:outline-none text-slate-200" onkeypress="handleTerminalInput(event)">
             </div>
             <div class="flex gap-2 flex-wrap">
                 <button onclick="runCommand('help')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">help</button>
+                <button onclick="runCommand('bio')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">bio</button>
                 <button onclick="runCommand('interests')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">interests</button>
+                <button onclick="runCommand('metrics')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">metrics</button>
                 <button onclick="runCommand('publications')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">publications</button>
                 <button onclick="runCommand('awards')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">awards</button>
                 <button onclick="runCommand('contact')" class="bg-slate-800 hover:bg-slate-700 text-xs px-3 py-1.5 rounded font-mono border border-slate-700">contact</button>
@@ -130,18 +145,18 @@
                 <i class="fas fa-brain text-sky-400"></i> Research Interests
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 font-mono text-sm">
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Computer Vision & Image Processing</div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Science</div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Large Language Model</div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Machine Learning</div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Data Analysis</div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300">Robotics</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-eye text-sky-500"></i> Computer Vision & Image Processing</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-database text-sky-500"></i> Data Science</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-robot text-sky-500"></i> Large Language Model</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-cogs text-sky-500"></i> Machine Learning</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-chart-line text-sky-500"></i> Data Analysis</div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl text-sky-300 flex items-center gap-2"><i class="fas fa-microchip text-sky-500"></i> Robotics</div>
             </div>
         </section>
 
-        <!-- Education & Experience -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+        <!-- Education & Employment History (Stacked Full Rows) -->
+        <div class="space-y-8">
+            <section class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
                 <h3 class="text-lg sm:text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
                     <i class="fas fa-graduation-cap"></i> Education
                 </h3>
@@ -172,9 +187,9 @@
                         <p class="text-slate-400 mt-1">Thesis Title: <b><i>“Design and Implementation of Smart Social Distancing Systems.”</i></b></p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="experience" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+            <section id="experience" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
                 <h3 class="text-lg sm:text-xl font-bold mb-6 flex items-center gap-2 text-sky-400">
                     <i class="fas fa-briefcase"></i> Employment History
                 </h3>
@@ -192,8 +207,8 @@
                         <p class="text-xs text-slate-500 mt-1">Research Focus: Robotics.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- Technical Skills -->
         <section id="skills" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
@@ -215,7 +230,7 @@
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Machine Learning</h4>
-                    <p class="text-slate-300">LR, DT, RF, Adaboost, XAI, XGBoost[cite: 4, 5]</p>
+                    <p class="text-slate-300">LR, DT, RF, Adaboost, XAI, XGBoost</p>
                 </div>
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <h4 class="font-semibold text-sky-400 mb-2">Databases & Tools</h4>
@@ -225,281 +240,311 @@
                     <h4 class="font-semibold text-sky-400 mb-2">Hardware & Others</h4>
                     <p class="text-slate-300">Proteus, Arduino, Eagle, STM32, Jetson, LaTeX</p>
                 </div>
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 sm:col-span-2 lg:col-span-3">
+                    <h4 class="font-semibold text-sky-400 mb-2">Others</h4>
+                    <p class="text-slate-300">Adobe Photoshop, Illustrator</p>
+                </div>
             </div>
         </section>
 
-        <!-- Research Publications Section -->
+        <!-- Research Publications Section with Filter Buttons and Independent Numbering -->
         <section id="publications" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl">
-            <h3 class="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3">
-                <i class="fas fa-book-open text-sky-400"></i> Research Publications (Total: 20)
-            </h3>
-            <div class="space-y-6 text-sm text-slate-300">
-                <h4 class="text-lg font-bold text-sky-400 mt-6 mb-4">Journal Proceedings</h4>  
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <h3 class="text-xl sm:text-2xl font-bold flex items-center gap-3">
+                    <i class="fas fa-book-open text-sky-400"></i> Research Publications (Total: 20)
+                </h3>
+                <!-- Filter Buttons -->
+                <div class="flex gap-2 flex-wrap text-xs font-mono">
+                    <button onclick="filterPubs('all')" class="pub-btn bg-sky-600 text-white px-3 py-1.5 rounded-lg transition">All</button>
+                    <button onclick="filterPubs('journal')" class="pub-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Journals</button>
+                    <button onclick="filterPubs('conference')" class="pub-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Conferences</button>
+                    <button onclick="filterPubs('award')" class="pub-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Best Paper / Awards</button>
+                </div>
+            </div>
+
+            <div class="space-y-8 text-sm text-slate-300" id="publications-container">
                 
-                <!-- Journal 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 3.8)</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b>; Kataoka, Y.; Teramoto, K.; Horio, Keiichi. 
-                        <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline">
-                            “Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).”
-                        </a><br>
-                        <i>Journal of Imaging</i> 2026, 12, 150.<br>
-                        Scopus Indexed | <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.3390/jimaging12040150</a>
-                    </p>
+                <!-- ==================== 1. JOURNAL PROCEEDINGS ==================== -->
+                <div class="pub-category" data-section="journal">
+                    <h4 class="text-lg font-bold text-sky-400 mb-4 pb-2 border-b border-slate-800">Journal Proceedings</h4>
+                    <div class="space-y-4">
+                        <!-- Journal 1 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="journal">
+                            <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">1. Journal (Q2, IF: 3.8)</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b>; Kataoka, Y.; Teramoto, K.; Horio, Keiichi. 
+                                <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline">
+                                    “Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).”
+                                </a><br>
+                                <i>Journal of Imaging</i> 2026, 12, 150.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.3390/jimaging12040150" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.3390/jimaging12040150</a>
+                            </p>
+                        </div>
+
+                        <!-- Journal 2 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="journal">
+                            <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">2. Journal (Q2, IF: 1.8)</span><br>
+                            <p class="mt-2 break-words">
+                                Islam Ferdib-Al, Sen Tonmay, Shamim Md. Shamim Parvej, Gharami Partha Protim and <b><u><i> Md. Rahatul Islam </i></u></b> 
+                                <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline">
+                                    “Deep Learning-based Multiclass Dementia Stage Classification for Alzheimer’s Disease Diagnosis from Imbalanced MRI Images Using Transfer Learning and Grad-CAM Explainability.”
+                                </a><br>
+                                <i>Engineering Research Express</i>, 2026<br>
+                                Scopus Indexed | <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline break-all">http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63</a>
+                            </p>
+                        </div>
+
+                        <!-- Journal 3 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="journal">
+                            <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">3. Journal (Q2, IF: 2.9)</span><br>
+                            <p class="mt-2 break-words">
+                                Ferdib-Al-Islam, Biswas, Prithvi, Gharami, Partha Protim, <b><u><i> Md. Rahatul Islam </i></u></b>. 
+                                <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline">
+                                    “XMP-Net: An XAI-Based Modified Xception Model for Recognizing Monkeypox and Other Skin Diseases.”
+                                </a><br>
+                                <i>BioMed Research International</i>, 2026, 1113178, 13 pages.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1155/bmri/1113178</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Journal 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 1.8)</span><br>
-                    <p class="mt-2 break-words">
-                        Islam Ferdib-Al, Sen Tonmay, Shamim Md. Shamim Parvej, Gharami Partha Protim and <b><u><i> Md. Rahatul Islam </i></u></b> 
-                        <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline">
-                            “Deep Learning-based Multiclass Dementia Stage Classification for Alzheimer’s Disease Diagnosis from Imbalanced MRI Images Using Transfer Learning and Grad-CAM Explainability.”
-                        </a><br>
-                        <i>Engineering Research Express</i>, 2026<br>
-                        Scopus Indexed | <a href="http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63" target="_blank" class="text-sky-400 hover:underline break-all">http://iopscience.iop.org/article/10.1088/2631-8695/ae6a63</a>
-                    </p>
+                <!-- ==================== 2. CONFERENCE PROCEEDINGS ==================== -->
+                <div class="pub-category" data-section="conference">
+                    <h4 class="text-lg font-bold text-sky-400 mb-4 pb-2 border-b border-slate-800">Conference Proceedings</h4>
+                    <div class="space-y-4">
+                        <!-- Conf 1 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">1. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Md. Shamim Parvej; Kaysun Molla; Shahid Rahman; Nazim Uddin; <b><u><i> Md. Rahatul Islam </i></u></b>, Ferdib-Al-Islam; K. M. Danial Sadad. 
+                                <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline">
+                                    “Leveraging deep learning for classifying common skin diseases in Bangladesh with Grad-CAM explainability.”
+                                </a><br>
+                                <i>AIP Conference Proceedings</i>, 2026.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1063/5.0329124</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 2 (Award) -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference award">
+                            <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">2. Conference | Best Paper Award</span><br>
+                            <p class="mt-2 break-words">
+                                Tiya Bisla; Ritik Shukla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
+                                <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline">
+                                    “A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten.”
+                                </a><br>
+                                <i>2026 14th International Conference on Information and Education Technology (ICIET)</i>, Koriyama, Japan.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/11561624/</a> <br>
+                                <strong class="text-emerald-400">AWARD: Best Paper Award</strong>
+                            </p>
+                        </div>
+
+                        <!-- Conf 3 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">3. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Ritik Shukla; Tiya Bisla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
+                                <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline">
+                                    “BENCHMARKING FACE RECOGNITION MODELS ON POSE-AWARE CHILD FACE EMBEDDINGS.”
+                                </a><br>
+                                <i>ICIC Express Letters, Part B: Applications</i>, 2026.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.24507/icicelb.17.06.533</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 4 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">4. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                T. Bisla, R. Shukla, M. Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b> and K. Horio. 
+                                <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline">
+                                    “Jumping behavior Analysis after Identification of Daycare Children’s Activities utilizing YOLOv8 Algorithm.”
+                                </a><br>
+                                <i>2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)</i>, Bangalore, India, 2024, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10677280</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 5 (Award) -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference award">
+                            <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">5. Conference | Best Paper Award</span><br>
+                            <p class="mt-2 break-words">
+                                Tiya Bisla, Ritik Shukla, Mansi Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b>, Takao Koyasu, Keisuke Teramoto, Yui Kataoka, Keiichi HORIO. 
+                                <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline">
+                                    “Kid Activity Recognition: A Comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s Algorithms.”
+                                </a><br>
+                                <i>2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)</i>, Vellore, India, 2024, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10574569</a> <br>
+                                <strong class="text-emerald-400">AWARD: Best Paper Award</strong>
+                            </p>
+                        </div>
+
+                        <!-- Conf 6 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">6. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
+                                <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline">
+                                    “Identification of Human Activity by Utilizing YOLOv5s Approaches.”
+                                </a><br>
+                                <i>2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)</i>, Mt Pleasant, MI, USA, 2024, pp. 1-7.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10586161</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 7 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">7. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                M. M. Hosen, <b><u><i> Md. Rahatul Islam </i></u></b>, F. Tabassum, S. T. Tonni, M. M. N. Noor and S. Rahman. 
+                                <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline">
+                                    “Localization of Dengue Virus Likelihood Using Image Processing Technique.”
+                                </a><br>
+                                <i>2024 International Conference on Emerging Smart Computing and Informatics (ESCI)</i>, Pune, India, 2024, pp. 1-7.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10497351</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 8 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">8. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                F. Tabassum, <b><u><i> Md. Rahatul Islam </i></u></b>, M. S. Ur Rahman and J. Majumder. 
+                                <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline">
+                                    “A Comprehensive Study on Different Optimizations of Pure Reference Counting Garbage Collectors.”
+                                </a><br>
+                                <i>2023 International Conference on Computational Intelligence, Networks and Security (ICCINS)</i>, Mylavaram, India, 2023, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10450100</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 9 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">9. Book Chapter / Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Mahmud, I., Ferdib-Al-Islam, <b><u><i> Md. Rahatul Islam </i></u></b>, Israk, M.A., Rahman, M.S.U., Ahuja, S. 
+                                <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline">
+                                    “IoT-Based Smart Poultry and Hatchery Farm: An Integrated Solution with Anti-Theft and Fire Alarm System.”
+                                </a><br>
+                                <i>Hybrid Intelligent Systems. HIS 2023. Lecture Notes in Networks and Systems, vol 1226</i>.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-78934-2_35</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 10 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">10. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b>, Rokon Uz Zaman, A. B. M., Ferdib-Al-Islam, Tabassum, Faria, Israk, Md. Araf, Mahmud, Md. Shakir, Majumder, Jimmy. 
+                                <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline">
+                                    “Crime Prediction by Detecting Violent Objects and Activity Using Pre-Trained YOLOv8n and MoViNet A0 Models.”
+                                </a><br>
+                                <i>2023 International Conference on Modeling and E-Information Research...</i> Karawang, Indonesia, 2023, pp. 44-49.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10458156</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 11 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">11. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Islam-Al-F., M. S. Sanim, K. M. Hasan, M. M. Alam, M. A. A. Walid, <b><u><i> Md. Rahatul Islam </i></u></b>. 
+                                <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline">
+                                    “Crop-RecFIS: Machine Learning Classifiers for Crop Recommendation and Feature Importance Scores Calculation.”
+                                </a><br>
+                                <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307833</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 12 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">12. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Ferdib-Al-Islam, A. Saha, E. J. Bristy, <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal and S. A. Ridita. 
+                                <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline">
+                                    “LIME-based Explainable AI Models for Predicting Disease from Patient’s Symptoms.”
+                                </a><br>
+                                <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307223</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 13 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">13. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
+                                <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline">
+                                    “Real Time-Based Face Recognition, Tracking, Counting, and Calculation of Spent Time of Person Using OpenCV and Centroid Tracker Algorithms.”
+                                </a><br>
+                                <i>2023 5th International Conference on Computer Communication and the Internet (ICCCI)</i>, Fujisawa, Japan, 2023, pp. 210-216.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10210102</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 14 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">14. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b>, M. A. Israk, Ferdib-Al-Islam, J. Majumder and S. Rahman. 
+                                <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline">
+                                    “SHD: Development of an Smart Headband for Deafblind People.”
+                                </a><br>
+                                <i>2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)</i>, Chittagong, Bangladesh, 2023, pp. 1-5.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10101656</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 15 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">15. Book Chapter / Conference</span><br>
+                            <p class="mt-2 break-words">
+                                Ferdib-Al-Islam, Sanim, M.S., <b><u><i> Md. Rahatul Islam </i></u></b>, Rahman, S., Afzal, R., Hasan, K.M. 
+                                <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline">
+                                    “Prediction of Dementia Using SMOTE Based Oversampling and Stacking Classifier.”
+                                </a><br>
+                                <i>Hybrid Intelligent Systems. HIS 2022. Lecture Notes in Networks and Systems, vol 647</i>.<br>
+                                Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-27409-1_40</a>
+                            </p>
+                        </div>
+
+                        <!-- Conf 16 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="conference">
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">16. Conference</span><br>
+                            <p class="mt-2 break-words">
+                                <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal, Asaduzzaman, Ferdib-Al-Islam and J. Majumder. 
+                                <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline">
+                                    “COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection.”
+                                </a><br>
+                                <i>2022 International Conference on Advancement in Electrical and Electronic Engineering (ICAEEE)</i>, Gazipur, Bangladesh, 2022, pp. 1-6.<br>
+                                Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/9836350</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Journal 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-sky-950 text-sky-400 px-2 py-0.5 rounded border border-sky-800">Journal (Q2, IF: 2.9)</span><br>
-                    <p class="mt-2 break-words">
-                        Ferdib-Al-Islam, Biswas, Prithvi, Gharami, Partha Protim, <b><u><i> Md. Rahatul Islam </i></u></b>. 
-                        <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline">
-                            “XMP-Net: An XAI-Based Modified Xception Model for Recognizing Monkeypox and Other Skin Diseases.”
-                        </a><br>
-                        <i>BioMed Research International</i>, 2026, 1113178, 13 pages.<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1155/bmri/1113178" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1155/bmri/1113178</a>
-                    </p>
+                <!-- ==================== 3. OTHERS / AWARDS ==================== -->
+                <div class="pub-category" data-section="award">
+                    <h4 class="text-lg font-bold text-sky-400 mb-4 pb-2 border-b border-slate-800">Others / Journal Articles (Gold Award)</h4>
+                    <div class="space-y-4">
+                        <!-- Other 1 -->
+                        <div class="pub-item bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden" data-category="journal award">
+                            <span class="text-xs font-mono bg-amber-950 text-amber-400 px-2 py-0.5 rounded border border-amber-800">1. Others | Gold Award</span><br>
+                            <p class="mt-2 text-sm text-slate-300 break-words">
+                                Sheikh Shihab Hossain, Ferdib-Al-Islam, <b><u><i>Md. Rahatul Islam </i></u></b>, Shahid Rahman, Md. Shamim Parvej. 
+                                <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline">
+                                    “Autism Spectrum disorder identification from facial images using Fine tuned Pre-trained deep learning models and Explainable AI techniques.”
+                                </a><br>
+                                <i>Semarak International Journal of Applied Psychology</i>, 5, Issue 1 (2025) 29-53, 2025.<br>
+                                DOI Link: <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.37934/sijap.5.1.2953b</a><br>
+                                <strong class="text-amber-400 mt-1 inline-block">AWARD: Gold Award</strong>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <h4 class="text-lg font-bold text-sky-400 mt-6 mb-4">Conference Proceedings</h4>
-
-                <!-- Conf 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference[cite: 2, 3]</span><br>
-                    <p class="mt-2 break-words">
-                        Md. Shamim Parvej; Kaysun Molla; Shahid Rahman; Nazim Uddin; <b><u><i> Md. Rahatul Islam </i></u></b>, Ferdib-Al-Islam; K. M. Danial Sadad. 
-                        <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline">
-                            “Leveraging deep learning for classifying common skin diseases in Bangladesh with Grad-CAM explainability.”[cite: 2, 3]
-                        </a><br>
-                        <i>AIP Conference Proceedings</i>, 2026[cite: 2, 3].<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1063/5.0329124" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1063/5.0329124</a>[cite: 2, 3]
-                    </p>
-                </div>
-
-                <!-- Conf 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award</span><br>
-                    <p class="mt-2 break-words">
-                        Tiya Bisla; Ritik Shukla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
-                        <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline">
-                            “A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten.”
-                        </a><br>
-                        <i>2026 14th International Conference on Information and Education Technology (ICIET)</i>, Koriyama, Japan.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/11561624/" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/11561624/</a> <br>
-                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong>
-                    </p>
-                </div>
-
-                <!-- Conf 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        Ritik Shukla; Tiya Bisla; Yui Kataoka; Keisuke Teramoto; <b><u><i> Md. Rahatul Islam </i></u></b>, Keiichi HORIO. 
-                        <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline">
-                            “BENCHMARKING FACE RECOGNITION MODELS ON POSE-AWARE CHILD FACE EMBEDDINGS.”
-                        </a><br>
-                        <i>ICIC Express Letters, Part B: Applications</i>, 2026.<br>
-                        Scopus Indexed | <a href="https://doi.org/10.24507/icicelb.17.06.533" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.24507/icicelb.17.06.533</a>
-                    </p>
-                </div>
-
-                <!-- Conf 4 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        T. Bisla, R. Shukla, M. Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b> and K. Horio. 
-                        <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline">
-                            “Jumping behavior Analysis after Identification of Daycare Children’s Activities utilizing YOLOv8 Algorithm.”
-                        </a><br>
-                        <i>2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)</i>, Bangalore, India, 2024, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10677280" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10677280</a>
-                    </p>
-                </div>
-
-                <!-- Conf 5 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Conference | Best Paper Award</span><br>
-                    <p class="mt-2 break-words">
-                        Tiya Bisla, Ritik Shukla, Mansi Dhawan, <b><u><i> Md. Rahatul Islam </i></u></b>, Takao Koyasu, Keisuke Teramoto, Yui Kataoka, Keiichi HORIO. 
-                        <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline">
-                            “Kid Activity Recognition: A Comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s Algorithms.”
-                        </a><br>
-                        <i>2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)</i>, Vellore, India, 2024, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10574569" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10574569</a> <br>
-                        <strong class="text-emerald-400">AWARD: Best Paper Award</strong>
-                    </p>
-                </div>
-
-                <!-- Conf 6 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
-                        <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline">
-                            “Identification of Human Activity by Utilizing YOLOv5s Approaches.”
-                        </a><br>
-                        <i>2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI)</i>, Mt Pleasant, MI, USA, 2024, pp. 1-7.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10586161" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10586161</a>
-                    </p>
-                </div>
-
-                <!-- Conf 7 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        M. M. Hosen, <b><u><i> Md. Rahatul Islam </i></u></b>, F. Tabassum, S. T. Tonni, M. M. N. Noor and S. Rahman. 
-                        <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline">
-                            “Localization of Dengue Virus Likelihood Using Image Processing Technique.”
-                        </a><br>
-                        <i>2024 International Conference on Emerging Smart Computing and Informatics (ESCI)</i>, Pune, India, 2024, pp. 1-7.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10497351" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10497351</a>
-                    </p>
-                </div>
-
-                <!-- Conf 8 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        F. Tabassum, <b><u><i> Md. Rahatul Islam </i></u></b>, M. S. Ur Rahman and J. Majumder. 
-                        <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline">
-                            “A Comprehensive Study on Different Optimizations of Pure Reference Counting Garbage Collectors.”
-                        </a><br>
-                        <i>2023 International Conference on Computational Intelligence, Networks and Security (ICCINS)</i>, Mylavaram, India, 2023, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10450100" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10450100</a>
-                    </p>
-                </div>
-
-                <!-- Conf 9 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference</span><br>
-                    <p class="mt-2 break-words">
-                        Mahmud, I., Ferdib-Al-Islam, <b><u><i> Md. Rahatul Islam </i></u></b>, Israk, M.A., Rahman, M.S.U., Ahuja, S. 
-                        <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline">
-                            “IoT-Based Smart Poultry and Hatchery Farm: An Integrated Solution with Anti-Theft and Fire Alarm System.”
-                        </a><br>
-                        <i>Hybrid Intelligent Systems. HIS 2023. Lecture Notes in Networks and Systems, vol 1226</i>.<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-78934-2_35" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-78934-2_35</a>
-                    </p>
-                </div>
-
-                <!-- Conf 10 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b>, Rokon Uz Zaman, A. B. M., Ferdib-Al-Islam, Tabassum, Faria, Israk, Md. Araf, Mahmud, Md. Shakir, Majumder, Jimmy. 
-                        <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline">
-                            “Crime Prediction by Detecting Violent Objects and Activity Using Pre-Trained YOLOv8n and MoViNet A0 Models.”
-                        </a><br>
-                        <i>2023 International Conference on Modeling and E-Information Research...</i> Karawang, Indonesia, 2023, pp. 44-49.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10458156" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10458156</a>
-                    </p>
-                </div>
-
-                <!-- Conf 11 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        Islam-Al-F., M. S. Sanim, K. M. Hasan, M. M. Alam, M. A. A. Walid, <b><u><i> Md. Rahatul Islam </i></u></b>. 
-                        <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline">
-                            “Crop-RecFIS: Machine Learning Classifiers for Crop Recommendation and Feature Importance Scores Calculation.”
-                        </a><br>
-                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307833" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307833</a>
-                    </p>
-                </div>
-
-                <!-- Conf 12 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        Ferdib-Al-Islam, A. Saha, E. J. Bristy, <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal and S. A. Ridita. 
-                        <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline">
-                            “LIME-based Explainable AI Models for Predicting Disease from Patient’s Symptoms.”
-                        </a><br>
-                        <i>2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)</i>, Delhi, India, 2023, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10307223" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10307223</a>
-                    </p>
-                </div>
-
-                <!-- Conf 13 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b> and Keiichi Horio. 
-                        <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline">
-                            “Real Time-Based Face Recognition, Tracking, Counting, and Calculation of Spent Time of Person Using OpenCV and Centroid Tracker Algorithms.”
-                        </a><br>
-                        <i>2023 5th International Conference on Computer Communication and the Internet (ICCCI)</i>, Fujisawa, Japan, 2023, pp. 210-216.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10210102" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10210102</a>
-                    </p>
-                </div>
-
-                <!-- Conf 14 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b>, M. A. Israk, Ferdib-Al-Islam, J. Majumder and S. Rahman. 
-                        <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline">
-                            “SHD: Development of an Smart Headband for Deafblind People.”
-                        </a><br>
-                        <i>2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)</i>, Chittagong, Bangladesh, 2023, pp. 1-5.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/10101656" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/10101656</a>
-                    </p>
-                </div>
-
-                <!-- Conf 15 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Book Chapter / Conference</span><br>
-                    <p class="mt-2 break-words">
-                        Ferdib-Al-Islam, Sanim, M.S., <b><u><i> Md. Rahatul Islam </i></u></b>, Rahman, S., Afzal, R., Hasan, K.M. 
-                        <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline">
-                            “Prediction of Dementia Using SMOTE Based Oversampling and Stacking Classifier.”
-                        </a><br>
-                        <i>Hybrid Intelligent Systems. HIS 2022. Lecture Notes in Networks and Systems, vol 647</i>.<br>
-                        Scopus Indexed | <a href="https://doi.org/10.1007/978-3-031-27409-1_40" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.1007/978-3-031-27409-1_40</a>
-                    </p>
-                </div>
-
-                <!-- Conf 16 -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl overflow-hidden">
-                    <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Conference</span><br>
-                    <p class="mt-2 break-words">
-                        <b><u><i> Md. Rahatul Islam </i></u></b>, R. Afzal, Asaduzzaman, Ferdib-Al-Islam and J. Majumder. 
-                        <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline">
-                            “COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection.”
-                        </a><br>
-                        <i>2022 International Conference on Advancement in Electrical and Electronic Engineering (ICAEEE)</i>, Gazipur, Bangladesh, 2022, pp. 1-6.<br>
-                        Scopus Indexed | <a href="https://ieeexplore.ieee.org/document/9836350" target="_blank" class="text-sky-400 hover:underline break-all">https://ieeexplore.ieee.org/document/9836350</a>
-                    </p>
-                </div>
-
-                <!-- Other Publication / Gold Award Section -->
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl mt-4 overflow-hidden">
-                    <span class="text-xs font-mono bg-amber-950 text-amber-400 px-2 py-0.5 rounded border border-amber-800">Others | Gold Award</span><br>
-                    <p class="mt-2 text-sm text-slate-300 break-words">
-                        Sheikh Shihab Hossain, Ferdib-Al-Islam, <b><u><i>Md. Rahatul Islam </i></u></b>, Shahid Rahman, Md. Shamim Parvej. 
-                        <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline">
-                            “Autism Spectrum disorder identification from facial images using Fine tuned Pre-trained deep learning models and Explainable AI techniques.”
-                        </a><br>
-                        <i>Semarak International Journal of Applied Psychology</i>, 5, Issue 1 (2025) 29-53, 2025.<br>
-                        DOI Link: <a href="https://doi.org/10.37934/sijap.5.1.2953b" target="_blank" class="text-sky-400 hover:underline break-all">https://doi.org/10.37934/sijap.5.1.2953b</a><br>
-                        <strong class="text-amber-400 mt-1 inline-block">AWARD: Gold Award</strong>
-                    </p>
-                </div>
             </div>
         </section>
 
@@ -517,7 +562,7 @@
                 </ul>
             </div>
 
-            <!-- Honors & Awards Section (Separated) -->
+            <!-- Honors & Awards Section -->
             <section id="awards" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
                 <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-trophy mr-2"></i> Honors & Awards</h3>
                 <div class="space-y-4 text-slate-300">
@@ -642,6 +687,120 @@
             <p class="text-slate-300"><strong>Japanese:</strong> Beginner N5 level equivalent</p>
         </section>
 
+        <!-- Extra-Curricular Activities -->
+        <section id="activities" class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
+            <h3 class="text-xl font-bold mb-6 text-sky-400"><i class="fas fa-users mr-2"></i> Extra-Curricular Activities</h3>
+            <div class="space-y-6 border-l-2 border-slate-800 pl-4 ml-2 text-slate-300">
+                
+                <!-- Activity 1 (With Logo and Facebook Link) -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-mono text-sky-400">1 June 2017 - Present</span>
+                        <h4 class="font-bold text-base mt-1">Chief Executive Officer & Vice-President</h4>
+                        <p class="text-slate-400 text-xs">Bangladesh Advance Robotics Research Center</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/BARRC.ORG" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs text-sky-400 transition">
+                            <img src="logo.jpg" alt="Logo" class="w-5 h-5 object-contain rounded-full" onerror="this.src='https://via.placeholder.com/20?text=Logo'">
+                            <i class="fab fa-facebook text-sky-400"></i> Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-mono text-sky-400">2 Dec 2018 - 31 December 2020</span>
+                        <h4 class="font-bold text-base mt-1">Former President</h4>
+                        <p class="text-slate-400 text-xs">CUB Robotics Club</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/groups/2005628519749799" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs text-sky-400 transition">
+                            <img src="logo.jpg" alt="Logo" class="w-5 h-5 object-contain rounded-full" onerror="this.src='https://via.placeholder.com/20?text=Logo'">
+                            <i class="fab fa-facebook text-sky-400"></i> Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-mono text-sky-400">30 Nov 2017 – 30 May 2019</span>
+                        <h4 class="font-bold text-base mt-1">Former Executive Director (Human Resource)</h4>
+                        <p class="text-slate-400 text-xs">Vision 2020 South Asian Project</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/VSAYL" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs text-sky-400 transition">
+                            <img src="logo.jpg" alt="Logo" class="w-5 h-5 object-contain rounded-full" onerror="this.src='https://via.placeholder.com/20?text=Logo'">
+                            <i class="fab fa-facebook text-sky-400"></i> Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-mono text-sky-400">1 August 2019 – 31 March 2020</span>
+                        <h4 class="font-bold text-base mt-1">Former Student Brand Ambassador</h4>
+                        <p class="text-slate-400 text-xs">Canadian University of Bangladesh</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.facebook.com/cubbd" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 px-3 py-1.5 rounded-lg flex items-center gap-2 text-xs text-sky-400 transition">
+                            <img src="logo.jpg" alt="Logo" class="w-5 h-5 object-contain rounded-full" onerror="this.src='https://via.placeholder.com/20?text=Logo'">
+                            <i class="fab fa-facebook text-sky-400"></i> Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity 5 -->
+                <div>
+                    <span class="text-xs font-mono text-sky-400">Organizer & Trainer</span>
+                    <h4 class="font-bold text-base mt-1">Robo Tech Leadership Program in Bangladesh</h4>
+                    <p class="text-slate-400 text-xs mt-1">Trained up 1000+ students in different districts (Dhaka, Mymensingh, Cumilla, Dinajpur, Sylhet, Chandpur and Chattogram).</p>
+                    <!-- Image Gallery Placeholder -->
+                    <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="rounded-lg overflow-hidden border border-slate-800 bg-slate-900 h-28 sm:h-36 flex items-center justify-center relative group">
+                            <img src="robo_tech_1.jpg" alt="Robo Tech Program" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://via.placeholder.com/300x200?text=Robo+Tech+Photo+1'">
+                        </div>
+                        <div class="rounded-lg overflow-hidden border border-slate-800 bg-slate-900 h-28 sm:h-36 flex items-center justify-center relative group">
+                            <img src="robo_tech_2.jpg" alt="Robo Tech Program" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://via.placeholder.com/300x200?text=Robo+Tech+Photo+2'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 6 -->
+                <div>
+                    <span class="text-xs font-mono text-sky-400">31 August 2020</span>
+                    <h4 class="font-bold text-base mt-1">Organizer - Let’s Tech Talk “Space Exploration with NASA”</h4>
+                    <!-- Image Gallery Placeholder -->
+                    <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="rounded-lg overflow-hidden border border-slate-800 bg-slate-900 h-28 sm:h-36 flex items-center justify-center relative group">
+                            <img src="nasa_talk_1.jpg" alt="Space Exploration with NASA" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://via.placeholder.com/300x200?text=NASA+Talk+Photo'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Home & Visited Countries Section -->
+        <section class="bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-2xl text-sm">
+            <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-globe-americas mr-2"></i> Home & Visited Countries</h3>
+            <p class="text-slate-300 mb-4 text-xs">Home country and countries traveled to for research, conferences, and academic pursuits:</p>
+            <div class="flex flex-wrap gap-4">
+                <!-- Home Country (Bangladesh) -->
+                <div class="bg-slate-900 border border-slate-800 px-4 py-2.5 rounded-xl flex items-center gap-3 text-slate-200">
+                    <img src="bd_flag.png" alt="Bangladesh Flag" class="w-7 h-5 object-cover rounded shadow" onerror="this.src='https://via.placeholder.com/28x20?text=BD'">
+                    <span class="font-medium">Bangladesh <span class="text-xs text-sky-400 font-mono ml-1">(Home Country)</span></span>
+                </div>
+                <!-- Visited Country (Japan) -->
+                <div class="bg-slate-900 border border-slate-800 px-4 py-2.5 rounded-xl flex items-center gap-3 text-slate-200">
+                    <img src="japan_flag.png" alt="Japan Flag" class="w-7 h-5 object-cover rounded shadow" onerror="this.src='https://via.placeholder.com/28x20?text=JP'">
+                    <span class="font-medium">Japan <span class="text-xs text-slate-400 font-mono ml-1">(Present Residence)</span></span>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
             <h3 class="text-2xl font-bold text-white mb-2">Contact Information</h3>
@@ -682,37 +841,94 @@
         <p>&copy; Developed by Md. Rahatul Islam.</p>
     </footer>
 
-    <!-- Terminal Interaction Script -->
+    <!-- Advanced Terminal & Filtering JS Scripts -->
     <script>
         function runCommand(cmd) {
             const output = document.getElementById('terminal-output');
             let response = '';
             
-            switch(cmd) {
+            switch(cmd.trim().toLowerCase()) {
                 case 'help':
-                    response = "Available commands: interests, awards, contact, clear";
+                    response = "Available commands: bio, interests, metrics, publications, awards, contact, clear";
+                    break;
+                case 'bio':
+                    response = "Ph.D. Researcher at Kyushu Institute of Technology, specializing in Computer Vision, Deep Learning, and Robotics.";
                     break;
                 case 'interests':
                     response = "Computer Vision, Deep Learning, LLM, Machine Learning, Data Analysis, Robotics.";
                     break;
+                case 'metrics':
+                    response = "Total Publications: 20 (3 Journals, 16 Conferences, 1 Other/Gold Award).";
+                    break;
                 case 'publications':
-                    response = "Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (Vit).";
+                    response = "Latest: Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students (Journal of Imaging, 2026).";
                     break;    
                 case 'awards':
-                    response = "KUMA Scholarship-2024, MEXT Scholarship-2022, Multiple Best Paper Awards[cite: 2, 6].";
+                    response = "KUMA Scholarship-2024, MEXT Scholarship-2022, Multiple Best Paper Awards.";
                     break;
                 case 'contact':
-                    response = "Email: mdrahatulislam.cub@gmail.com";
+                    response = "Email: mdrahatulislam.cub@gmail.com | Location: Kitakyushu, Japan.";
                     break;
                 case 'clear':
                     output.innerHTML = '<p class="text-green-400">$ _</p>';
                     return;
                 default:
-                    response = "Command not found. Type 'help'.";
+                    response = `Command not found: '${cmd}'. Type 'help' for available commands.`;
             }
 
             output.innerHTML += `<p class="text-green-400 mt-2">$ ${cmd}</p><p class="text-slate-300">${response}</p>`;
             output.scrollTop = output.scrollHeight;
+        }
+
+        function handleTerminalInput(e) {
+            if (e.key === 'Enter') {
+                const input = document.getElementById('terminal-input');
+                if (input.value.trim() !== '') {
+                    runCommand(input.value);
+                    input.value = '';
+                }
+            }
+        }
+
+        // Publication Filtering Script for Separated Categories
+        function filterPubs(category) {
+            const categories = document.querySelectorAll('.pub-category');
+            const items = document.querySelectorAll('.pub-item');
+            const buttons = document.querySelectorAll('.pub-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-sky-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            event.target.classList.add('bg-sky-600', 'text-white');
+
+            if (category === 'all') {
+                categories.forEach(cat => cat.style.display = 'block');
+                items.forEach(item => item.style.display = 'block');
+            } else if (category === 'award') {
+                categories.forEach(cat => {
+                    let hasMatch = false;
+                    cat.querySelectorAll('.pub-item').forEach(item => {
+                        if (item.getAttribute('data-category').includes('award')) {
+                            item.style.display = 'block';
+                            hasMatch = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    cat.style.display = hasMatch ? 'block' : 'none';
+                });
+            } else {
+                categories.forEach(cat => {
+                    if (cat.getAttribute('data-section') === category) {
+                        cat.style.display = 'block';
+                        cat.querySelectorAll('.pub-item').forEach(item => item.style.display = 'block');
+                    } else {
+                        cat.style.display = 'none';
+                    }
+                });
+            }
         }
     </script>
 </body>
