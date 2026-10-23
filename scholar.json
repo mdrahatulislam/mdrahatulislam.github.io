@@ -1,1 +1,108 @@
-{"updated":null,"total":null,"papers":[]}
+{
+  "updated": "2026-10-23T12:18:42Z",
+  "total": 67,
+  "hindex": 5,
+  "i10index": 1,
+  "papers": [
+    {
+      "title": "Crime prediction by detecting violent objects and activity using pre-trained YOLOv8n and MoViNet A0 models",
+      "year": "2023",
+      "cites": 10
+    },
+    {
+      "title": "LIME-based explainable AI models for predicting disease from patient’s symptoms",
+      "year": "2023",
+      "cites": 9
+    },
+    {
+      "title": "Autism Spectrum disorder identification from facial images using Fine tuned Pre-trained deep learning models and Explainable AI techniques",
+      "year": "2025",
+      "cites": 7
+    },
+    {
+      "title": "Real time-based face recognition, tracking, counting, and calculation of spent time of person using OpenCV and centroid tracker algorithms",
+      "year": "2023",
+      "cites": 7
+    },
+    {
+      "title": "Prediction of dementia using SMOTE based oversampling and stacking classifier",
+      "year": "2022",
+      "cites": 7
+    },
+    {
+      "title": "XMP‐Net: An XAI‐Based Modified Xception Model for Recognizing Monkeypox and Other Skin Diseases",
+      "year": "2026",
+      "cites": 5
+    },
+    {
+      "title": "Jumping behavior analysis after identification of daycare children's activities utilizing yolov8 algorithm",
+      "year": "2024",
+      "cites": 4
+    },
+    {
+      "title": "Kid activity recognition: A comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s algorithms",
+      "year": "2024",
+      "cites": 4
+    },
+    {
+      "title": "Identification of Human Activity by Utilizing YOLOv5s Approaches",
+      "year": "2024",
+      "cites": 4
+    },
+    {
+      "title": "Crop-RecFIS: Machine Learning Classifiers for Crop Recommendation and Feature Importance Scores Calculation",
+      "year": "2023",
+      "cites": 3
+    },
+    {
+      "title": "SHD: Development of an Smart Headband for Deafblind People",
+      "year": "2023",
+      "cites": 3
+    },
+    {
+      "title": "Deep learning-based multiclass dementia stage classification for Alzheimer’s disease diagnosis from imbalanced MRI images using transfer learning and Grad-CAM explainability",
+      "year": "2026",
+      "cites": 1
+    },
+    {
+      "title": "Spatially Time-Based Robust Tracking and Re-Identification of Kindergarten Students: A Hybrid Deep Learning Framework Combining YOLOv8n and Vision Transformer (ViT)",
+      "year": "2026",
+      "cites": 1
+    },
+    {
+      "title": "Localization of Dengue Virus Likelihood Using Image Processing Technique",
+      "year": "2024",
+      "cites": 1
+    },
+    {
+      "title": "COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection",
+      "year": "2022",
+      "cites": 1
+    },
+    {
+      "title": "Benchmarking Face Recognition Models on Pose-Aware Child Face Embeddings",
+      "year": "2026",
+      "cites": 0
+    },
+    {
+      "title": "Leveraging deep learning for classifying common skin diseases in Bangladesh with Grad-CAM explainability",
+      "year": "2026",
+      "cites": 0
+    },
+    {
+      "title": "A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten",
+      "year": "2026",
+      "cites": 0
+    },
+    {
+      "title": "A Comprehensive Study on Different Optimizations of Pure Reference Counting Garbage Collectors",
+      "year": "2023",
+      "cites": 0
+    },
+    {
+      "title": "IoT-Based Smart Poultry and Hatchery Farm: An Integrated Solution with Anti-Theft and Fire Alarm System",
+      "year": "2023",
+      "cites": 0
+    }
+  ]
+}
