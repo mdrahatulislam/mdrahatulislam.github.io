@@ -132,14 +132,18 @@ const updChart = (n = 0) => {
   ch.update();
 };
 (async () => {
+  // Google Scholar data (scholar.json is refreshed by GitHub Actions); falls back to OpenAlex/Crossref if missing
+  const S = await jget('scholar.json?v=' + Math.floor(Date.now() / 36e5)), SP = S && Array.isArray(S.papers) && S.papers.length ? S : null;
   let c; try { c = JSON.parse(localStorage.getItem('pubcites2')); } catch (e) {}
-  if (c && Date.now() - c.t < (c.full ? 864e5 : 36e5)) Object.assign(CITES, c.d);
+  if (SP) P.forEach(p => { let b = null, bs = 0; SP.papers.forEach(w => { const s = sim(w.title || '', p.title); if (s > bs) { bs = s; b = w; } }); CITES[p.url] = b && bs >= .7 ? (b.cites || 0) : 0; });
+  else if (c && Date.now() - c.t < (c.full ? 864e5 : 36e5)) Object.assign(CITES, c.d);
   else {
     for (let i = 0; i < P.length; i += 5) await Promise.all(P.slice(i, i + 5).map(async p => { const v = await getC(p); if (v != null) CITES[p.url] = v; }));
     try { localStorage.setItem('pubcites2', JSON.stringify({ t: Date.now(), d: CITES, full: P.every(p => CITES[p.url] != null) })); } catch (e) {}
   }
   P.forEach(p => { if (p.cites != null) CITES[p.url] = p.cites; });
   const v = Object.values(CITES); totalC = v.length ? v.reduce((a, b) => a + b, 0) : null;
+  if (SP && typeof SP.total === 'number') totalC = SP.total;
   paintCites(); setCount();
 })();
 
