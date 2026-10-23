@@ -145,6 +145,17 @@ const updChart = (n = 0) => {
   const v = Object.values(CITES); totalC = v.length ? v.reduce((a, b) => a + b, 0) : null;
   if (SP && typeof SP.total === 'number') totalC = SP.total;
   paintCites(); setCount();
+  // Google Scholar "Cited by" box (Citations / h-index / i10-index)
+  if (SP) {
+    const num = v => (typeof v === 'number' ? v : '–');
+    const rows = [['Citations', SP.total], ['h-index', SP.hindex], ['i10-index', SP.i10index]]
+      .map(([l, v]) => `<tr class="border-t border-slate-800"><td class="py-1 text-slate-300">${l}</td><td class="py-1 text-right text-amber-400 font-bold">${num(v)}</td></tr>`).join('');
+    const bx = document.createElement('div'); bx.id = 'scholar-box';
+    bx.className = 'bg-slate-900 border border-slate-800 rounded-xl p-4 mb-6 text-sm font-mono max-w-xs';
+    bx.innerHTML = `<div class="flex justify-between items-center mb-2"><span class="text-slate-400 text-xs">Google Scholar · Cited by</span><a href="https://scholar.google.com/citations?user=pCDDhPwAAAAJ" target="_blank" rel="noopener" class="text-sky-400 text-xs hover:underline">Profile ↗</a></div><table class="w-full"><tbody>${rows}</tbody></table>`;
+    const old = document.getElementById('scholar-box'); if (old) old.remove();
+    const gr = sec.querySelector('.grid'); if (gr) gr.before(bx);
+  }
 })();
 
 // ---- Chart + network (libraries load lazily) ----
