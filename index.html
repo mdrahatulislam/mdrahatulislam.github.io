@@ -10,24 +10,6 @@
         .terminal-bg { background-color: #0d1117; color: #58a6ff; font-family: 'Courier New', Courier, monospace; }
     </style>
 
-    <script>
-        // রাইট-ক্লিক বন্ধ করা
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            alert('Right-click is disabled on this portfolio.');
-        });
-
-        // কিবোর্ড শর্টকাট ব্লক করা
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'a')) {
-                e.preventDefault();
-                alert('Copying is disabled on this website.');
-            }
-            if (e.key === 'F12') {
-                e.preventDefault();
-            }
-        });
-    </script>
 
     <style>
         body {
@@ -941,5 +923,10 @@
             }
         }
     </script>
+    <script src="data.js"></script>
+    <script src="features.js"></script>
+    <script src="ui.js"></script>
+    <script src="anim.js"></script>
+    <script src="extras.js"></script>
 </body>
 </html>
