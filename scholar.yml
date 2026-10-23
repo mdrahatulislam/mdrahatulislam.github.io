@@ -22,7 +22,7 @@ jobs:
         run: pip install scholarly
 
       - name: Fetch citations from Google Scholar
-        run: python scripts/update_scholar.py
+        run: python update_scholar.py
 
       - name: Commit if changed
         run: |

@@ -11,7 +11,7 @@ from pathlib import Path
 from scholarly import scholarly
 
 SCHOLAR_ID = "pCDDhPwAAAAJ"
-OUT = Path(__file__).resolve().parent.parent / "scholar.json"
+OUT = Path(__file__).resolve().parent / "scholar.json"  # script and scholar.json live in the repo root
 
 
 def main() -> int:
