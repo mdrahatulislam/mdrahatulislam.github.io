@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T12:18:42Z",
-  "total": 67,
+  "updated": "2026-10-28T09:32:18Z",
+  "total": 68,
   "hindex": 5,
   "i10index": 1,
   "papers": [
@@ -37,7 +37,7 @@
     {
       "title": "Jumping behavior analysis after identification of daycare children's activities utilizing yolov8 algorithm",
       "year": "2024",
-      "cites": 4
+      "cites": 5
     },
     {
       "title": "Kid activity recognition: A comprehensive study of kid activity recognition with monitoring activity level using YOLOv8s algorithms",
@@ -78,6 +78,11 @@
       "title": "COV-SSDS: Design and Construction of Automatic Social Distancing System to Minimize COVID-19 Infection",
       "year": "2022",
       "cites": 1
+    },
+    {
+      "title": "Automated Quantification of Social Dynamics in Kindergarten Environments using YOLOv8 and Temporal-Buffer Augmented DBSCAN",
+      "year": "2026",
+      "cites": 0
     },
     {
       "title": "Benchmarking Face Recognition Models on Pose-Aware Child Face Embeddings",
